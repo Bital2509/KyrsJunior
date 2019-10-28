@@ -1,0 +1,11 @@
+*{
+    font-family: "Trebuchet MS";
+    color: white;
+}
+body{
+    background: #3d3d3d;
+}
+.container{
+    margin-left: 48px;
+    margin-right: 48px;
+}
