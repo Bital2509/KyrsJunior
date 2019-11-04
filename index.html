@@ -7,7 +7,80 @@
 </head>
 <body>
 <div class="container">
-
+    <form class="form" action="#">
+        <div class="block-1-of-4">
+            <img class="form-img" src="my_logo.png">
+        </div>
+        <div class="block-1-of-3">
+            <h3>Имя: Виталий</h3>
+            <p>Ваще хз что я делаю</p>
+            <input class="form-input" type="text" placeholder="Введи сюды что-нибудь это всеравно не сохранится :3">
+            <button class="form-button">Возможно оно заработает <p>Отправить</p></button>
+            <a class="form-link" href="https://github.com/Bital2509">Короче ссылка на github</a>
+        </div>
+    </form>
+    <div class="block-1-of-1">
+        <h2>Не ну можно было и сделать тип норм форму</h2>
+    </div>
+    <div class="form-1-of-2 form-normal">
+        <h3 class="form-block-1-of-1 self-center">Заполните форму для отправки!</h3>
+        <p class="form-block-1-of-2">
+            <input class="form-input" type="text" placeholder="Введите имя">
+        </p>
+        <p class="form-block-1-of-2">
+            <input class="form-input" type="text" placeholder="Введите фамилию">
+        </p>
+        <p class="form-block-1-of-1">
+            <input type="text" class="form-input" placeholder="Номер телефона">
+        </p>
+        <p class="form-block-1-of-1">
+            <textarea class="form-textarea" name="" cols="30" rows="10"
+                      placeholder="Введите ваше сообщение"></textarea>
+        </p>
+        <p class="form-block-1-of-1 self-right">
+            <button class="form-button">Отправить</button>
+        </p>
+    </div>
+    <div class="form-1-of-2 form-normal items-center">
+        <h3 class="form-block-1-of-1 self-center">Заполните форму для отправки!</h3>
+        <div class="form-block-1-of-2">
+            <select name="select" id="select" class="form-select">
+                <option disabled selected>Сделай свой выбор</option>
+                <option class="form-select-option-horde" value="0">Орда</option>
+                <option class="form-select-option-alliance" value="1">Альянс</option>
+            </select>
+        </div>
+        <div class="form-block-1-of-2">
+            <div id="form-icon-one" style="display: none" class="center">
+                <img class="horde-img" src="horde.png" alt="">
+            </div>
+            <div id="form-icon-two" style="display: none" class="center">
+                <img class="horde-img" src="alliance.png" alt="">
+            </div>
+        </div>
+        <ul class="form-block-1-of-1 self-center">
+            <li class="form-ul-li">
+                <input type="radio" name="gender" id="form-radio-button_1">
+                <label for="form-radio-button_1">Classic</label>
+            </li>
+            <li class="form-ul-li">
+                <input type="radio" name="gender" id="form-radio-button_2">
+                <label for="form-radio-button_2">Lich King</label>
+            </li>
+            <li class="form-ul-li">
+                <input type="radio" name="gender" id="form-radio-button_3">
+                <label for="form-radio-button_3">Mists of Pandaria</label>
+            </li>
+            <li class="form-ul-li">
+                <input type="radio" name="gender" id="form-radio-button_4">
+                <label for="form-radio-button_4">Cataclysm</label>
+            </li>
+        </ul>
+        <p class="form-block-1-of-1 self-right">
+            <button class="form-button">Отправить</button>
+        </p>
+    </div>
 </div>
+<script src="index.js"></script>
 </body>
 </html>

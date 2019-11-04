@@ -1,11 +1,170 @@
-*{
+* {
     font-family: "Trebuchet MS";
     color: white;
 }
-body{
+
+body {
     background: #3d3d3d;
 }
-.container{
-    margin-left: 48px;
-    margin-right: 48px;
+
+.container {
+    margin: 96px 48px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 24px;
+
 }
+
+.form-input {
+    background: darkgrey;
+    border: none;
+    width: 100%;
+    text-overflow: ellipsis;
+    padding: 6px 0px;
+}
+
+.form-select {
+    background: darkgrey;
+    border: none;
+    width: 100%;
+    text-overflow: ellipsis;
+    padding: 6px 0px;
+    text-shadow: black 0 0 2px;
+    font-size: 25px;
+}
+
+option:not(:checked) {
+    background-color: #666666;
+}
+
+.form-select-option-horde {
+    color: red;
+    font-weight: bold;
+    text-shadow: black 0 0 2px;
+}
+
+.form-select-option-alliance {
+    color: blue;
+    font-weight: bold;
+    text-shadow: black 0 0 2px;
+}
+
+::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+.form-textarea {
+    background: darkgrey;
+    border: none;
+    width: 100%;
+    text-overflow: ellipsis;
+    padding: 6px 0px;
+    white-space: pre-wrap;
+    resize: none;
+    min-height: 50px;
+}
+
+.form-ul-li {
+    list-style-type: none;
+    display: inline;
+    margin: 24px;
+}
+.horde-img{
+    width: 100px;
+}
+.form-img {
+    width: 100%;
+}
+.center{
+    text-align: center;
+}
+.items-center{
+    align-items: center;
+}
+.form {
+    display: grid;
+    grid-column-end: span 12;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 24px;
+}
+
+.form-1-of-2 {
+    display: grid;
+    grid-column-end: span 6;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 12px;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px purple;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.form-1-of-2:hover {
+    box-shadow: 5px 5px 15px #9d009d;
+}
+
+.self-center {
+    justify-self: center;
+}
+
+.self-left {
+    justify-self: left;
+}
+
+.self-right {
+    justify-self: right;
+}
+
+.form-button {
+    margin: 24px 0px;
+    border: none;
+    background: darkred;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.form-normal {
+    background: #525252;
+}
+
+.form-link {
+    text-decoration: none;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.form-link:hover {
+    color: lightgreen;
+}
+
+.form-button:hover {
+    border-radius: 50px;
+    background: red;
+}
+
+.block-1-of-1 {
+    grid-column-end: span 12;
+}
+
+.block-1-of-2 {
+    grid-column-end: span 6;
+}
+
+.block-1-of-3 {
+    grid-column-end: span 4;
+}
+
+.block-1-of-4 {
+    grid-column-end: span 3;
+}
+
+.form-block-1-of-1 {
+    grid-column-end: span 6;
+}
+
+.form-block-1-of-2 {
+    grid-column-end: span 3;
+}
+
