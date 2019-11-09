@@ -10,11 +10,11 @@ body::-webkit-scrollbar {
 
 
 .title {
-    margin: 0 150px;
+    margin: 0 24px;
 }
 
 .subtitle {
-    margin: 0 150px;
+    margin: 0 24px;
 }
 
 .header {
@@ -45,7 +45,7 @@ body::-webkit-scrollbar {
 .user {
     display: flex;
     position: absolute;
-    left: 10px;
+    left: 20px;
     align-items: center;
     max-width: 140px;
     z-index: 101;
