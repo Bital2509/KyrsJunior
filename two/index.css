@@ -60,6 +60,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    color: lime;
     font-weight: bold;
 }
 
@@ -68,6 +69,7 @@ body::-webkit-scrollbar {
     margin-left: 10px;
     display: flex;
     flex-direction: column;
+    color: white;
 }
 
 .user-massage {
