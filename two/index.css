@@ -1,5 +1,9 @@
+*{
+    color: white;
+}
 body {
-    background: lightgray;
+    background: url("vpWcSlOfCUg (1).jpg") no-repeat fixed;
+    background-size: 100%;
     margin: 0;
     padding: 0;
 }
@@ -7,7 +11,14 @@ body {
 body::-webkit-scrollbar {
     width: 0;
 }
-
+.body-container{
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    background: #666666;
+    display: flex;
+    flex-direction: column;
+}
 
 .title {
     margin: 0 24px;
@@ -18,93 +29,67 @@ body::-webkit-scrollbar {
 }
 
 .header {
-    position: fixed;
     background: #525252;
     height: 70px;
     width: 100%;
     display: flex;
     top: 0;
-    overflow: hidden;
     opacity: 1;
     flex-direction: column;
-    z-index: 102;
 }
-
-.left-menu {
-    z-index: 100;
+table{
+    border-spacing: 0;
+    width: -webkit-fill-available;
+}
+.table-left{
+    width: 145px;
+    padding: 0;
     background: #3d3d3d;
-    position: fixed;
-    width: 150px;
-    top: 0;
-    bottom: 0;
-    height: auto;
-    left: 0;
+    border-right: 5px black solid;
+}
+.user{
+    padding: 12px;
+    display: flex;
     align-items: center;
 }
-
-.user {
-    display: flex;
-    position: absolute;
-    left: 20px;
-    align-items: center;
-    max-width: 140px;
-    z-index: 101;
-}
-
-.icon-user {
-    display: flex;
+.icon{
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    background: #525252;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    border-radius: 50%;
+    background: #525252;
     color: lime;
-    font-weight: bold;
 }
-
-.user-info {
-    font-size: 10px;
-    margin-left: 10px;
+.info{
+    margin: auto;
+}
+.table-right{
+    width: -webkit-fill-available;
+}
+.massage{
+    padding: 12px;
     display: flex;
     flex-direction: column;
-    color: white;
 }
-
-.user-massage {
-    display: flex;
-    margin-left: 160px;
-    align-items: center;
+.name{
+color: lime;
 }
-
-.user-name {
-    margin: 0;
-}
-
-.text {
-    display: block;
-    min-width: 100%;
-    margin: 0;
+.text{
     border: 1px black solid;
     padding: 12px;
-    background: #525252;
-    color: white;
-    height: auto;
+    width: -webkit-fill-available;
 }
-
-.massage {
-    padding: 24px;
-    width: 95%;
-}
-
-.user-select {
-    background: #350808;
-    padding: 2px;
-    color: red;
-}
-
 .container {
-    margin-top: 100px;
+    overflow-x: hidden;
     overflow-y: scroll;
+    height: auto;
+    display: flex;
+}
+.tag-name{
+    background: red;
+    padding: 6px;
+    color: black;
+    font-weight: bold;
 }
