@@ -1,6 +1,7 @@
-*{
+* {
     color: white;
 }
+
 body {
     background: url("vpWcSlOfCUg (1).jpg") no-repeat fixed;
     background-size: 100%;
@@ -11,7 +12,8 @@ body {
 body::-webkit-scrollbar {
     width: 0;
 }
-.body-container{
+
+.body-container {
     width: 800px;
     height: 600px;
     margin: auto;
@@ -21,11 +23,12 @@ body::-webkit-scrollbar {
 }
 
 .title {
-    margin: 0 24px;
+    margin: 0;
 }
 
 .subtitle {
-    margin: 0 24px;
+    margin: 0;
+    display: inline-flex;
 }
 
 .header {
@@ -37,22 +40,32 @@ body::-webkit-scrollbar {
     opacity: 1;
     flex-direction: column;
 }
-table{
+
+.header-title {
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+}
+
+table {
     border-spacing: 0;
     width: -webkit-fill-available;
 }
-.table-left{
+
+.table-left {
     width: 145px;
     padding: 0;
     background: #3d3d3d;
     border-right: 5px black solid;
 }
-.user{
+
+.user {
     padding: 12px;
     display: flex;
     align-items: center;
 }
-.icon{
+
+.icon {
     width: 50px;
     height: 50px;
     display: flex;
@@ -62,32 +75,39 @@ table{
     background: #525252;
     color: lime;
 }
-.info{
+
+.info {
     margin: auto;
 }
-.table-right{
+
+.table-right {
     width: -webkit-fill-available;
 }
-.massage{
+
+.massage {
     padding: 12px;
     display: flex;
     flex-direction: column;
 }
-.name{
-color: lime;
+
+.name {
+    color: lime;
 }
-.text{
+
+.text {
     border: 1px black solid;
     padding: 12px;
     width: -webkit-fill-available;
 }
+
 .container {
     overflow-x: hidden;
     overflow-y: scroll;
     height: auto;
     display: flex;
 }
-.tag-name{
+
+.tag-name {
     background: red;
     padding: 6px;
     color: black;
