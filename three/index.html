@@ -2,53 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bouncer</title>
-    <link rel="stylesheet" href="site.css">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<header>
-    <div class="top-menu">
-        <div class="container">
-            <div class="left-controls">
-                <span class="dd">EN</span>
-                <span class="dd">USD</span>
-            </div>
-            <div class="right-controls flex-vertical-center">
-                <a href="#" class="profile-link flex-vertical-center font-semibold">
-                    <img src="img/profile_close_2.svg">
-                    <span>My profile</span>
-                </a>
-                <div class="cart-controls flex-vertical-center">
-                    <a href="#" class="cart-link flex-vertical-center font-semibold">
-                        <img src="img/bag_3.svg">
-                        <span>0 Items</span>
-                    </a>
-                    <span class="cart-total">$0.00</span>
-                </div>
-                <img src="img/search-icon.svg">
-            </div>
+<div class="container">
+    <div class="sum">
+        <h1 class="sum-title">1. Найти сумму только положительных из трех чисел</h1>
+        <div class="number">
+            <input type="number" id="firstNumber" placeholder="Введите 1 число">
+            <span class="plus">+</span>
+            <input type="number" id="secondNumber" placeholder="Введите 2 число">
+            <span class="plus">+</span>
+            <input type="number" id="thirdNumber" placeholder="Введите 3 число">
         </div>
+        <h2>
+            <button class="sum-button" id="result">Итог</button>
+        </h2>
+        <div class="sum-result" id="sumResult"></div>
     </div>
-    <div class="logo-and-nav-container">
-        <div class="logo">
-            BOUNCER
+    <div class="expression">
+        <h1 class="sum-title">2. Посчитать выражение: макс(а*б*с, а+б+с) + 3</h1>
+        <div class="number">
+            <input type="number" id="firstExpression" placeholder="Введите 1 число">
+            <input type="number" id="secondExpression" placeholder="Введите 2 число">
+            <input type="number" id="thirdExpression" placeholder="Введите 3 число">
         </div>
-        <div class="nav-container">
-            <nav class="menu">
-                <a href="">HOME</a>
-                <a href="">STORE</a>
-                <a href="">IPHONE</a>
-                <a href="">IPAD</a>
-                <a href="">MACBOOK</a>
-                <a href="">ACCESORIES</a>
-            </nav>
-        </div>
+        <h2>
+            <button class="sum-button" id="expressionButton">Итог</button>
+        </h2>
+        <div class="sum-result" id="expressionResult"></div>
     </div>
-</header>
-<div class="block-carousel">
-
+    <div class="point">
+        <h1 class="sum-title">3. Определить, какой четверти принадлежит точка с координатами (х,у)</h1>
+        <button class="point_button" id="pointButton">Нажми что бы ввести точки</button>
+    </div>
+    <div class="mass-min-max">
+        <h1 class="sum-title">
+            <p>4. Про min и max в массиве (все вычисления можно проводить в одном и том же цикле, т.е. 4 раза почти одно
+                и то же писать не надо):</p>
+            <p>- Найти минимальный элемент массива</p>
+            <p>- Найти максимальный элемент массива</p>
+            <p>- Найти индекс минимального элемента массива</p>
+            <p>- Найти индекс максимального элемента массива</p>
+            <p>5. Посчитать сумму элементов массива с нечетными индексами</p>
+        </h1>
+        <div class="mass">
+            <input type="text" placeholder="Введите N или Rand или r" id="massN">
+            <h2><button class="sum-button" id="massButton">Вывод массива</button></h2>
+        </div>
+        <div class="sum-result" id="massResult"></div>
+    </div>
+    <script src="index.js"></script>
 </div>
 </body>
 </html>
