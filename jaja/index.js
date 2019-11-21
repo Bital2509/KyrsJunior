@@ -75,15 +75,16 @@ massButton.addEventListener('click', function () {
     let arr = [];
     let arrRand = new Array(randomer);
     let k = 0;
-
+    let result = '';
     if (isFinite(massN)) {
         massResult.innerHTML = "<p>Количество элементов введенное в ручную:" + massN + "</p>";
 
         for (let i = 0; i < massN; i++) {
             arr[i] = getRndInteger(-10, 20);
+            result += arr[i] + '  ';
             k++;
         }
-        massResult.innerHTML += "<p>Массив который получился: " + arr + "<br/>Число проходов = " + k + "</p>";
+        massResult.innerHTML += "<p>Массив который получился: " + result + "<br/>Число проходов = " + k + "</p>";
 
         let max = arr[0];
         let min = arr[0];
@@ -119,12 +120,13 @@ massButton.addEventListener('click', function () {
         massResult.innerHTML += "<p>" + oddSum + "</p>"
     } else if (massN === "Rand" || massN === "r") {
         massResult.innerHTML = "<p>Количество элементов введенное рандомно:" + randomer + "</p>";
-
+        let resultRand = '';
         for (let j = 0; j < arrRand.length; j++) {
             arrRand[j] = getRndInteger(-10, 20);
+            resultRand += arrRand[j] + '  ';
             k++;
         }
-        massResult.innerHTML += "<p>Массив который получился: " + arrRand + "<br/>Число проходов = " + k + "</p>";
+        massResult.innerHTML += "<p>Массив который получился: " + resultRand + "<br/>Число проходов = " + k + "</p>";
 
         let max = arrRand[0];
         let min = arrRand[0];
