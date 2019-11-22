@@ -265,3 +265,82 @@ factorialButton.addEventListener('click', function () {
 
     factorialblock.innerHTML += "<p> Зеркало числа " + resultat + ": " + revend + "</p>";
 });
+
+var sortmassButton = document.getElementById('sortmassButton');
+
+sortmassButton.addEventListener('click', function () {
+    let sortmassblock = document.getElementById('sortmassblock');
+    sortmassblock.classList += ' sum-result_active';
+    let arrRand = new Array(getRndInteger(3, 10));
+    let style = '';
+
+    for (let i = 0; i < arrRand.length; i++) {
+        arrRand[i] = getRndInteger(0, 10);
+        style += arrRand[i] + ' ';
+    }
+    sortmassblock.innerHTML = "<p> Какой массив у нас получился <br/>" + style + "</p>";
+
+    let oddNumber = 0;
+    let oddIndex = 0;
+    let oddSum = 0;
+
+    for (let i = 0; i < arrRand.length; i++) {
+        if (i % 2 !== 0) {
+            oddIndex += 1;
+            oddNumber = arrRand[i];
+            sortmassblock.innerHTML += "<br/> Нечетное число:" + oddNumber + "<br/>";
+        }
+    }
+    sortmassblock.innerHTML += "<p>Количество: " + oddIndex + "</p>";
+
+    let tmp;
+
+    tmp = arrRand.reverse();
+
+    sortmassblock.innerHTML += "<p> Зеркало массива <br/>";
+    for (let i = 0; i < arrRand.length; i++) {
+        sortmassblock.innerHTML += tmp[i] + ' ';
+    }
+    sortmassblock.innerHTML += "</p>";
+
+    let swapNum;
+    let goodstyle = '';
+
+    for (let i = 0, endI = arrRand.length - 1; i < endI; i++) {
+        for (let j = 0, endJ = endI - i; j < endJ; j++) {
+            if (arrRand[j] > arrRand[j + 1]) {
+                swapNum = arrRand[j];
+                arrRand[j] = arrRand[j + 1];
+                arrRand[j + 1] = swapNum;
+            }
+        }
+    }
+    sortmassblock.innerHTML += "<p>Bubble: " + arrRand + "</p>";
+
+    for (let i = 0, l = arrRand.length, k = l - 1; i < k; i++) {
+        let indexMin = i;
+        for (let j = i + 1; j < l; j++) {
+            if (arrRand[indexMin] > arrRand[j]) {
+                indexMin = j;
+            }
+        }
+        if (indexMin !== i) {
+            [arrRand[i], arrRand[indexMin]] = [arrRand[indexMin], arrRand[i]];
+        }
+    }
+
+    sortmassblock.innerHTML += "<p>Select: " + arrRand + "</p>";
+
+    for (let i = 1, l = arrRand.length; i < l; i++) {
+        let current = arrRand[i];
+        let j = i;
+        while (j > 0 && arrRand[j - 1] > current) {
+            arrRand[j] = arrRand[j - 1];
+            j--;
+        }
+        arrRand[j] = current;
+    }
+
+    sortmassblock.innerHTML += "<p>Insert: " + arrRand + "</p>";
+
+})
