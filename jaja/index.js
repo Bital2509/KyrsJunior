@@ -164,3 +164,104 @@ massButton.addEventListener('click', function () {
         alert("Возможно вы ввели что-то не верно !");
     }
 });
+
+var sum1of99Button = document.getElementById('sum1of99Button');
+
+sum1of99Button.addEventListener('click', function () {
+    let sumOneOfNine = document.getElementById('sumOneOfNine').value;
+    let sum1of99 = document.getElementById('sum1of99');
+
+    sum1of99.className += ' sum-result_active';
+
+    let arr = [];
+    let k = 0;
+    let result = '';
+
+    for (let i = 0; i < sumOneOfNine; i++) {
+        arr[i] = getRndInteger(-10, 20);
+        result += arr[i] + '  ';
+        k++;
+    }
+
+    sum1of99.innerHTML = "<p>Массив который получился: " + result + "<br/>Число проходов = " + k + "</p>";
+
+    let sum = 0;
+
+    for (let i = 0; i < sumOneOfNine; i++) {
+        sum += arr[i];
+    }
+
+    sum1of99.innerHTML += "<p>Сумма чисел: " + sum + "</p>";
+
+    let simpleNum = 0;
+    let firstNum = 0;
+    let secondNum = 0;
+
+    for (let i = 0; i < sumOneOfNine; i++) {
+        firstNum = arr[i] % 2;
+        secondNum = arr[i];
+        if (firstNum !== 0 && secondNum !== 1) {
+            simpleNum = arr[i];
+            sum1of99.innerHTML += "<p>простое число: " + simpleNum + "</p>";
+        }
+    }
+
+    let sqrt = 0;
+
+    for (let i = 0; i < sumOneOfNine; i++) {
+        if (arr[i] >= 0) {
+            sqrt = Math.round(Math.sqrt(arr[i]));
+            sum1of99.innerHTML += "<p>корень натурального числа: " + arr[i] + " : " + sqrt + "</p>";
+        }
+    }
+
+});
+
+var factorialButton = document.getElementById('factorialButton');
+
+factorialButton.addEventListener('click', function () {
+
+    let number = prompt('Введите положительное число');
+    let factorialblock = document.getElementById('factorialblock');
+
+    factorialblock.className += ' sum-result_active';
+
+    let resultat = 1;
+    let firstNumber = number;
+    let secondNumber = 0;
+
+    for (let i = 0; i < number; i++) {
+        secondNumber = firstNumber - 1;
+        if (secondNumber !== 0) {
+            resultat *= (secondNumber);
+            firstNumber = secondNumber
+        }
+    }
+    resultat *= number;
+
+    factorialblock.innerHTML = "<p> факториал числа " + number + ": " + resultat + "</p>";
+
+    let sum = 0, tmp;
+    let num = resultat;
+
+    while (num) {
+        tmp = num % 10;
+        num = (num - tmp) / 10;
+        sum += tmp;
+    }
+
+    factorialblock.innerHTML += "<p> сумма числа " + resultat + ": " + sum + "</p>";
+
+    let rez = resultat;
+    let reverse;
+    let revend = '';
+
+
+    while (rez) {
+        reverse = rez % 10;
+        rez = (rez - reverse) / 10;
+        revend += reverse + '';
+    }
+
+    factorialblock.innerHTML += "<p> Зеркало числа " + resultat + ": " + revend + "</p>";
+});
