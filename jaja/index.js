@@ -7,8 +7,9 @@ button.addEventListener('click', function () {
     var ferstNumber = document.getElementById("firstNumber");
     var secondNumber = document.getElementById("secondNumber");
     var thirdNumber = document.getElementById("thirdNumber");
-    if (ferstNumber.value === '' || secondNumber.value === '' || thirdNumber.value === '') {
-        alert("Таак, А ну ка ввел значения!!")
+
+    if (ferstNumber.value === '' || ferstNumber.value < 0 || secondNumber.value === '' || secondNumber.value < 0 || thirdNumber.value === '' || thirdNumber.value < 0) {
+        alert("Таак, А ну ка ввел положительные значения!!")
     } else {
         var sum = parseInt(ferstNumber.value) + parseInt(secondNumber.value) + parseInt(thirdNumber.value);
 
